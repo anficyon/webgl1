@@ -1,13 +1,14 @@
 ﻿body {
 
 	font-size: 100%;
+	/*font-family: "Segoe UI Light",Tahoma , Arial, Helvetica, Sans-Serif;*/
 	font-family:"Segoe UI",Tahoma, Arial, Helvetica;
 	color: #000;
 	line-height: 150%;
 	background: #FFF;
 	margin: 0px;
 	padding: 0px;
-        overflow:hidden;
+/*    overflow:hidden;*/
 }
 
 ul {margin: 5px 0px 0px 0px;padding: 0px;list-style: square;}
@@ -150,8 +151,8 @@ span.tb-active,span.tb-active:hover{
 .ivcanvas3d{
 	border: none;
 	display:block;
-	/*height:600px;*/
-touch-action: none;
+	height:600px;
+	touch-action: none;
 }
 
 .toolbar{
@@ -441,16 +442,16 @@ clear:both;
 {
 	width:200px;
 	height:600px;
+	max-height:600px;
 	float:left;
 	background:#F6F6F6;
 	display:block;
 	overflow-y:auto;
 }
-
-
 .meta-view
 {
 width:300px;
+height:600px;
 overflow:auto;
 line-height: 100%;
 float:right;
@@ -544,59 +545,4 @@ background-image:url('treeicons.png');
 .tree-view .selected .label, .tree-view .selected,  .tree-view .selected:hover .label{
  background-color:#007ACC !important;
  color:white;
-}.meta-view
-{
--webkit-touch-callout: none;
--webkit-user-select: none;
--khtml-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
-user-select: none;
-overflow:auto;
-line-height: 100%;
-white-space:nowrap;
 }
-
-
-.meta-view td{
-	height: 18px;
-	font-family:"Segoe UI",Tahoma, Arial, Helvetica, sans-serif;
-	font-size:12.0px;
-	line-height:126%;
-}
-.meta-view .row {
-    cursor:pointer;
-}
-.meta-view .row:hover{
- background-color:#E5F3FB;
-}
-
-.meta-view .dummy ,.meta-view .open, .meta-view .close{
-    width:16px;
-    display:block;
-}
-
-.meta-view .open {
-    background-image:url('treeicons.png');
-    height:16px;
-    background-position:-16px,0px;
-}
-.meta-view .close{background-position:0px,0px;
-    background-image:url('treeicons.png');
-    height:16px;
-}
-.meta-view .open:hover{background-position:-48px,0px;}
-.meta-view .close:hover{background-position:-32px,0px;}
-
-
-.meta-view .name {
-    max-width:120px;    
-}
-
-.meta-view .nameS {
-    overflow: hidden;
-    text-overflow: ellipsis;    
-    max-width:120px;    
-    display:block;
-}
-
