@@ -3,6 +3,95 @@ body {
     margin: 0px;
 }
 
+.panel
+{
+  position:absolute;
+  left:-600px;
+   top:0px;
+   font-family: "Segoe UI",Arial, sans;
+  font-size: 19.095px;
+  transition: all 0.2s ease;
+  background:rgba(255,255,255,0.7);
+  box-shadow: 8px 0px 20px 2px rgba(0,0,0,0.04);
+}
+
+.main{
+ font-family: "Segoe UI",Arial, sans;
+   font-size:30px;
+   margin-top:20px;
+   padding-bottom:10px !important;
+   margin-left:20px;
+   opacity:0.5;
+   line-height:100%;
+   cursor:pointer;
+}
+
+.panel h1{
+   padding:0px;
+   margin:0px;
+   padding-right:30px;
+   font-family: "Segoe UI Light","Segoe UI",Arial, sans;
+   text-align:right;
+   font-size:18px;   
+   color:#444;
+}
+
+.panel hr{
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.panel .content
+{
+ position:absolute;
+ overflow-y:auto;
+ overflow-x:hidden;
+
+ bottom:40px;
+
+ transition: all 0.2s ease;
+}
+
+.main img{
+ position:absolute;
+ padding-top:4px;
+ display:inline-block;  
+ transition: all 0.2s ease;
+}
+.main .text{
+ position:absolute;
+ display:inline-block;  
+ width:200px;
+ transition: all 0.2s ease;
+}
+
+.main:hover{
+   opacity:1.0;
+}
+
+.panel ul
+{
+list-style: none;
+padding: 0;
+margin: 0 3em 0 0;
+}
+
+.panel li
+{
+   opacity:0.8;
+   width:210px;
+   padding:3px 0px 3px 20px;
+   cursor:pointer;
+}
+
+.panel li:hover
+{
+   background:#fff;
+   opacity:1.0;
+}
+
 .dprogress {
  width:100px;
  height:100px;
@@ -33,9 +122,142 @@ body {
 
 .tprogress .textProgress
 {
+  /*vertical-align:middle; */
   display:inline-block;  
   font-family:"Segoe UI",Tahoma, Arial, Helvetica;
   font-size:26px;
   color:#000;
  line-height:100px; 
+}
+
+.buttons
+{
+
+ float:left;
+ bottom:9px;
+ left:7px;
+ position:absolute;
+}
+.buttons .passive, .buttons .active
+{
+ cursor:pointer;
+ padding:3px 6px 3px 6px;
+}
+.buttons .active
+{
+ border-bottom: 2px solid #000;
+}
+
+.buttons .passive:hover
+{
+ background:#e7e7e7;
+}
+.buttons .active:hover
+{
+ background:#fff;
+}
+
+.playButton{
+	font-family: 'Segoe UI SemiBold','Segoe UI', Arial, sans-serif;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	padding: 7px 20px 7px 20px;
+	font-size:20.46px;
+	background: #00AEEE;
+	color: #FFF;
+	border: 0px none;
+	outline: 0px none;
+	cursor: pointer;
+	right:15px;margin-top:15px;position:absolute;
+}
+.playButton:hover {background: #0090C6;text-decoration: none;color: white;}
+
+.tree-view
+{
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+overflow:hidden;
+line-height: 100%;
+white-space:nowrap;
+}
+
+.tree-view .group{}
+.tree-view .group-c{}
+.tree-view .items{margin-left:18px;}
+
+
+.tree-view .group-c .items{margin-left:18px;display:none;}
+
+.tree-view .icon, .tree-view .open, .tree-view .node, .tree-view .vis, .tree-view  .hdn{
+background-image:url('treeicons.png');
+	height:24px;
+	width:24px;
+	display:block;
+	float:left;
+	margin-top:1px;
+	margin-left:4px;
+}
+
+.tree-view .open , .tree-view .vis, .tree-view  .hdn{
+    margin-left:0px;
+}
+
+.tree-view .icon{background-position:-192px,0px;}	
+.tree-view .open{background-position:-24px,0px;}
+.tree-view .open:hover{background-position:-72px,0px;}
+.tree-view .node{background-position:-240px,0px;}
+.tree-view .vis{background-position:-120px,0px;}
+.tree-view .hdn{background-position:-96px,0px;}
+
+
+.tree-view .group-c .open{background-position:0px,0px;}
+.tree-view .group-c .open:hover{background-position:-48px,0px;}
+
+.tree-view .item,.tree-view .gitem
+{
+	display:block;
+	cursor:pointer;
+	height:27px;
+}
+
+.tree-view .normal,.tree-view .selected
+{
+	display:inline-block;
+	cursor:pointer;
+	height:27px;
+}
+.tree-view .normal:hover{
+    background-color:#E5F3FB;
+}
+.tree-view .selected
+{
+    background-color:#007ACC;
+}
+
+.tree-view .item{
+	margin-left:24px;
+}
+.tree-view .label{
+	height: 27px;
+	padding:0px;
+	padding-left:6px;
+	padding-right:12px;
+	display:inline-block;
+	font-family:"Segoe UI",Tahoma, Arial, Helvetica, sans-serif;
+	font-size:19.095px;
+	line-height:126%;
+}
+
+.tree-view .item:hover .label,.tree-view .gitem:hover .label{
+ background-color:#E5F3FB;
+}
+
+.tree-view .selected .label, .tree-view .selected,  .tree-view .selected:hover .label{
+ background-color:#007ACC !important;
+ color:white;
 }
